@@ -12,7 +12,12 @@ mongoose.connection.on('error',(err)=>{
 
 mongoose.connection.once("open", () =>{
     console.log("MongoDB Connected!");
-} )
+} );
+
+//Bring in the models
+require("./models/User");
+require("./models/Chatroom");
+require("./models/Message");
 
 const app = require('./app');
 
